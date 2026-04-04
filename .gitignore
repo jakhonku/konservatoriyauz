@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+dist
+.env
+backend/uploads/*
+backend/data/news.json
+.vscode
+.idea
+*.log
