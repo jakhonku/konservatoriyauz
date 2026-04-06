@@ -27,7 +27,7 @@ const Konservatoriya = () => {
                                 controls 
                                 poster="https://via.placeholder.com/800x450/1e3a8a/ffffff?text=O'zbekiston+Davlat+Konservatoriyasi"
                             >
-                                <source src="http://konservatoriya.uz/wp-content/uploads/2023/11/IMG_1868.mp4" type="video/mp4" />
+                                <source src="https://konservatoriya.uz/wp-content/uploads/2023/11/IMG_1868.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>

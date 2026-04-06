@@ -154,20 +154,20 @@ const Header = () => {
                                             <div className="text-sm font-semibold text-gray-700 pt-1 pb-1">{link.label}</div>
                                             <div className="pl-4 mt-1 space-y-2 border-l-2 border-blue-100">
                                                 {link.subLinks.map((sub, sIdx) => (
-                                                    <Link key={sIdx} to={sub.path} className="block text-sm text-gray-500 hover:text-blue-700">{sub.label}</Link>
+                                                    <Link key={sIdx} to={sub.path} onClick={() => setIsMenuOpen(false)} className="block text-sm text-gray-500 hover:text-blue-700">{sub.label}</Link>
                                                 ))}
                                             </div>
                                         </div>
                                     ) : (
-                                        <Link key={lIdx} to={link.path} className="block text-sm text-gray-600 hover:text-blue-700 pt-1 pb-1">{link.label}</Link>
+                                        <Link key={lIdx} to={link.path} onClick={() => setIsMenuOpen(false)} className="block text-sm text-gray-600 hover:text-blue-700 pt-1 pb-1">{link.label}</Link>
                                     )
                                 ))}
                             </div>
                         </div>
                     ))}
                     <div className="pt-4 space-y-4">
-                        <a href="#" className="block font-bold text-blue-900">{t('nav.festivallar')}</a>
-                        <a href="https://hemis.konservatoriya.uz/dashboard/login" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-blue-700 text-white text-center rounded-md font-semibold">{t('nav.hemis')}</a>
+                        <a href="#" onClick={() => setIsMenuOpen(false)} className="block font-bold text-blue-900">{t('nav.festivallar')}</a>
+                        <a href="https://hemis.konservatoriya.uz/dashboard/login" onClick={() => setIsMenuOpen(false)} target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-blue-700 text-white text-center rounded-md font-semibold">{t('nav.hemis')}</a>
                     </div>
                 </div>
             )}

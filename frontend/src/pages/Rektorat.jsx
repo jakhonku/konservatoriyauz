@@ -13,7 +13,7 @@ const Rektorat = () => {
             reception: t('rektorat.days.monFri'),
             phone: "+998 71 244-53-20",
             email: "rektor@konservatoriya.uz",
-            image: "http://konservatoriya.uz/wp-content/uploads/2024/01/photo_2020-08-07_19-28-27.jpg",
+            image: "https://konservatoriya.uz/wp-content/uploads/2024/01/photo_2020-08-07_19-28-27.jpg",
             primary: true,
         },
         {
@@ -23,7 +23,7 @@ const Rektorat = () => {
             reception: t('rektorat.days.wed'),
             phone: t('rektorat.unavailable'),
             email: "xusnitdinova@konservatoriya.uz",
-            image: "http://konservatoriya.uz/wp-content/uploads/2024/01/1.png",
+            image: "https://konservatoriya.uz/wp-content/uploads/2024/01/1.png",
         },
         {
             name: "Abdullaev Farhod Rustambekovich",
@@ -32,7 +32,7 @@ const Rektorat = () => {
             reception: t('rektorat.days.monFriRange'),
             phone: "+998 71 239-48-76",
             email: "prorektor@konservatoriya.uz",
-            image: "http://konservatoriya.uz/wp-content/uploads/2024/01/farhod-abdullaev-768x516.jpg",
+            image: "https://konservatoriya.uz/wp-content/uploads/2024/01/farhod-abdullaev-768x516.jpg",
         },
         {
             name: "Gʻafurova Sayyora Akmalovna",
@@ -41,7 +41,7 @@ const Rektorat = () => {
             reception: t('rektorat.days.monFriRange'),
             phone: "+998 71 244-95-09",
             email: "gafurovailmiy@konservatoriya.uz",
-            image: "http://konservatoriya.uz/wp-content/uploads/2024/01/%D1%81%D0%B0%D0%B9%D1%91%D1%80%D0%B0.jpg",
+            image: "https://konservatoriya.uz/wp-content/uploads/2024/01/%D1%81%D0%B0%D0%B9%D1%91%D1%80%D0%B0.jpg",
         }
     ];
 
