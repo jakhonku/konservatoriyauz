@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="relative h-[92vh] min-h-[600px] w-full overflow-hidden flex items-end">
             {/* Background with Zoom Animation (Ken Burns Effect) */}
@@ -33,18 +36,18 @@ const Hero = () => {
                         
                         <div className="border-l-4 border-blue-900 pl-8 space-y-8 animate-fade-in-up">
                             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide leading-relaxed drop-shadow-2xl italic text-white/95">
-                                Musiqa fani va san’ati har bir insonni, <span className="text-gray-300 not-italic">ayniqsa, yoshlarimizni</span> yuksak axloq, go‘zallik va nafosat ruhida tarbiyalashda qudratli vositadir.
+                                {t('hero.quote')} <span className="text-gray-300 not-italic">{t('hero.quoteHighlight')}</span> {t('hero.quoteEnd')}
                             </h1>
                             
                             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-8 pt-4">
                                 <a href="#" className="group relative px-8 py-3 bg-blue-900 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-blue-950 shadow-xl shadow-black/60 text-center">
                                     <span className="relative z-10 flex items-center justify-center">
-                                        Qabul jarayoni
+                                        {t('hero.qabul')}
                                         <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                                     </span>
                                 </a>
                                 <a href="#" className="px-8 py-3 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm flex items-center justify-center">
-                                    Biz haqimizda
+                                    {t('hero.bizHaqimizda')}
                                 </a>
                             </div>
                         </div>

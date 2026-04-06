@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Hero from '../components/Hero';
 import { Calendar, Tag, ChevronRight, PlayCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const [news, setNews] = useState([]);
     const [loading, setLoading] = useState(true);
+    const { t } = useTranslation();
 
     useEffect(() => {
         fetchNews();
@@ -32,15 +34,15 @@ const Home = () => {
                     <div className="flex flex-col md:flex-row justify-between items-end mb-20 space-y-6 md:space-y-0">
                         <div className="max-w-3xl">
                             <h2 className="text-5xl md:text-6xl font-black text-blue-950 mb-6 font-serif tracking-tight leading-tight uppercase">
-                                Konservatoriya <br />
-                                <span className="text-blue-700 italic">Yangiliklari</span>
+                                {t('home.title')} <br />
+                                <span className="text-blue-700 italic">{t('home.subtitle')}</span>
                             </h2>
                             <p className="text-gray-500 font-sans italic text-xl border-l-4 border-blue-900 pl-6">
-                                Akademik musiqa, tadbirlar va oliygoh hayotidagi eng so'nggi voqealar bilan tanishing.
+                                {t('home.desc')}
                             </p>
                         </div>
                         <a href="/news" className="flex items-center space-x-2 text-blue-800 font-bold font-sans uppercase tracking-[0.2em] text-xs hover:translate-x-2 transition-transform">
-                            <span>Barcha yangiliklar</span>
+                            <span>{t('home.allNews')}</span>
                             <ChevronRight size={18} />
                         </a>
                     </div>
@@ -51,7 +53,7 @@ const Home = () => {
                         </div>
                     ) : news.length === 0 ? (
                         <div className="py-20 text-center bg-gray-50 rounded-[4rem] border-2 border-dashed border-gray-100">
-                            <p className="text-gray-400 font-serif italic text-xl">Yangiliklar hozircha mavjud emas.</p>
+                            <p className="text-gray-400 font-serif italic text-xl">{t('home.noNews')}</p>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -102,7 +104,7 @@ const Home = () => {
                                             </div>
                                             <div className="flex items-center space-x-2">
                                                 <Tag size={14} className="text-blue-600" />
-                                                <span>5 min o'qiladi</span>
+                                                <span>5 {t('home.readTime')}</span>
                                             </div>
                                         </div>
                                         

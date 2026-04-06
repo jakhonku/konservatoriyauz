@@ -1,28 +1,30 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { t } = useTranslation();
 
     const navItems = [
         {
-            title: "Konservatoriya",
-            links: ["Konservatoriya", "Davlat ramzlari", "Tuzilma (Rektorat, Fakultetlar)"]
+            title: t('nav.konservatoriya'),
+            links: [t('nav.konservatoriya'), t('nav.davlatRamzlari'), t('nav.tuzilma')]
         },
         {
-            title: "Faoliyat",
-            links: ["Ilmiy faoliyat", "Ilmiy-uslubiy jurnal", "Korrupsiyaga qarshi kurashish", "Xalqaro hamkorlik", "Yoshlar bilan ishlash", "Xalqaro hamkorlik bo'limi xabarlari"]
+            title: t('nav.faoliyat'),
+            links: [t('nav.ilmiyFaoliyat'), t('nav.ilmiyUslubiy'), t('nav.korrupsiya'), t('nav.xalqaro'), t('nav.yoshlar'), t('nav.xalqaroXabarlar')]
         },
         {
-            title: "Ochiq ma'lumotlar",
-            links: ["Yashil makon", "Moliyaviy faoliyat", "O'quv-uslubiy faoliyat"]
+            title: t('nav.ochiqMalumotlar'),
+            links: [t('nav.yashilMakon'), t('nav.moliyaviy'), t('nav.oquvUslubiy')]
         },
         {
-            title: "Talabalar",
-            links: ["Grant uchun ariza", "Grant test", "Yakuniy nazorat jarayonlarini onlayn kuzatish", "Dars jadvali «Bakalavr»", "Dars jadvali magistratura", "Talaba yutuqlari", "Ekofaol talabalar"]
+            title: t('nav.talabalar'),
+            links: [t('nav.grantAriza'), t('nav.grantTest'), t('nav.yakuniyJarayon'), t('nav.darsBakalavr'), t('nav.darsMagistratura'), t('nav.talabaYutuqlari'), t('nav.ekofaol')]
         },
         {
-            title: "Qabul",
-            links: ["Qabul dasturlari", "Kasbiy ijodiy imtihon natijalari", "2023-2024", "2024-2025"]
+            title: t('nav.qabul'),
+            links: [t('nav.qabulDasturlari'), t('nav.ijodiyNatijalar'), "2023-2024", "2024-2025"]
         }
     ];
 
@@ -38,7 +40,7 @@ const Header = () => {
 
                 {/* Mobile Menu Button */}
                 <button 
-                    className="md:hidden p-2 text-gray-600 hover:text-blue-700"
+                    className="md:hidden p-2 text-gray-600 hover:text-blue-700 cursor-pointer"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +49,7 @@ const Header = () => {
                 </button>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex flex-wrap lg:space-x-4 xl:space-x-6 items-center font-medium text-xs lg:text-sm">
+                <nav className="hidden md:flex flex-wrap lg:space-x-2 xl:space-x-4 justify-center items-center font-medium text-[11px] lg:text-xs">
                     {navItems.map((item, idx) => (
                         <div key={idx} className="dropdown relative py-3 group">
                             <a href="#" className="nav-link flex items-center space-x-1 text-gray-800 hover:text-blue-700 whitespace-nowrap">
@@ -65,8 +67,8 @@ const Header = () => {
                             </div>
                         </div>
                     ))}
-                    <a href="#" className="nav-link text-gray-800 hover:text-blue-700 py-3 whitespace-nowrap">Festivallar</a>
-                    <a href="#" className="nav-link text-gray-800 hover:text-blue-700 py-3 whitespace-nowrap text-xs">Ijodiy imtihonlarni onlayn kuzatish</a>
+                    <a href="#" className="nav-link text-gray-800 hover:text-blue-700 py-3 whitespace-nowrap">{t('nav.festivallar')}</a>
+                    <a href="#" className="nav-link text-gray-800 hover:text-blue-700 py-3 whitespace-nowrap text-xs">{t('nav.onlaynKuzatish')}</a>
                 </nav>
 
                 {/* Right side CTA */}
@@ -77,7 +79,7 @@ const Header = () => {
                         </svg>
                     </button>
                     <a href="#" className="inline-flex items-center justify-center px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white text-[10px] xl:text-xs font-semibold rounded-md transition-colors shadow-sm whitespace-nowrap">
-                        HEMIS Tizimi
+                        {t('nav.hemis')}
                     </a>
                 </div>
             </div>
@@ -96,8 +98,8 @@ const Header = () => {
                         </div>
                     ))}
                     <div className="pt-4 space-y-4">
-                        <a href="#" className="block font-bold text-blue-900">Festivallar</a>
-                        <a href="#" className="block w-full py-3 bg-blue-700 text-white text-center rounded-md font-semibold font-bold">HEMIS Tizimi</a>
+                        <a href="#" className="block font-bold text-blue-900">{t('nav.festivallar')}</a>
+                        <a href="#" className="block w-full py-3 bg-blue-700 text-white text-center rounded-md font-semibold">{t('nav.hemis')}</a>
                     </div>
                 </div>
             )}
