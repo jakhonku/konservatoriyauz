@@ -113,9 +113,20 @@ const Admin = () => {
                                         />
                                     </div>
                                     <div>
+                                        <label className="block text-xs font-black text-slate-400 mb-2 font-sans uppercase tracking-[0.2em] px-2">Kategoriya</label>
+                                        <select 
+                                            className="w-full p-5 bg-gray-50 border-2 border-transparent focus:border-blue-500 focus:bg-white rounded-[1.5rem] outline-none transition-all font-sans font-bold text-slate-700 appearance-none cursor-pointer"
+                                            value={category}
+                                            onChange={(e) => setCategory(e.target.value)}
+                                        >
+                                            <option value="Yangiliklar">Yangiliklar</option>
+                                            <option value="Afisha">Afisha / Konsert</option>
+                                        </select>
+                                    </div>
+                                    <div>
                                         <label className="block text-xs font-black text-slate-400 mb-2 font-sans uppercase tracking-[0.2em] px-2">Kontent / Tavsif</label>
                                         <textarea 
-                                            className="w-full p-5 bg-gray-50 border-2 border-transparent focus:border-blue-500 focus:bg-white rounded-[1.5rem] outline-none transition-all h-60 resize-none font-serif text-lg leading-relaxed"
+                                            className="w-full p-5 bg-gray-50 border-2 border-transparent focus:border-blue-500 focus:bg-white rounded-[1.5rem] outline-none transition-all h-40 resize-none font-serif text-lg leading-relaxed"
                                             value={content}
                                             onChange={(e) => setContent(e.target.value)}
                                             placeholder="Yangilik matnini batafsil yozing..."
@@ -206,8 +217,10 @@ const Admin = () => {
                                     </div>
                                     <div className="p-6 space-y-3">
                                         <div className="flex items-center space-x-2">
-                                            <span className="text-[10px] font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-widest">{item.category}</span>
-                                            <span className="text-[10px] font-bold text-gray-400 font-sans lowercase">{new Date(item.date).toDateString()}</span>
+                                            <span className={`text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest ${item.category === 'Afisha' ? 'bg-purple-50 text-purple-600' : 'bg-blue-50 text-blue-600'}`}>
+                                                {item.category || 'Yangiliklar'}
+                                            </span>
+                                            <span className="text-[10px] font-bold text-gray-400 font-sans lowercase">{new Date(item.date).toLocaleDateString()}</span>
                                         </div>
                                         <h3 className="font-bold text-slate-800 text-lg leading-tight font-serif h-14 overflow-hidden line-clamp-2">{item.title}</h3>
                                     </div>

@@ -5,11 +5,41 @@ const resources = {
   uz: {
     translation: {
       saytTest: "SAYT TEST REJIMIDA ISHLAYABDI",
+      // Rektorat
+      rektorat: {
+        title: "Rektorat",
+        subtitle: "O‘zbekiston davlat konservatoriyasi rahbariyati",
+        desc: "Qabul vaqtlari, aloqa raqamlari va manzillari",
+        prorectors: "Prorektorlar",
+        reception: "Qabul vaqti",
+        phone: "Telefon",
+        email: "E-mail",
+        degreeLabel: "Ilmiy darajasi",
+        unavailable: "Mavjud emas",
+        days: {
+          monFri: "Dushanba-Juma",
+          wed: "Chorshanba 14:00-17:00",
+          monFriRange: "Dushanba-Juma, 9:00-12:00"
+        },
+        positions: {
+          rektor: "Rektor",
+          firstProrektor: "Yoshlar masalalari va ma’naviy-ma’rifiy ishlar boʻyicha birinchi prorektor",
+          eduProrektor: "Oʻquv ishlari boʻyicha prorektor",
+          sciProrektor: "Ilmiy va ijodiy ishlar boʻyicha prorektor"
+        }
+      },
       // Header
       nav: {
         konservatoriya: "Konservatoriya",
+        odobAhloq: "Odob-ahloq qoidalari",
         davlatRamzlari: "Davlat ramzlari",
         tuzilma: "Tuzilma",
+        rektorat: "Rektorat",
+        fakultetlar: "Fakultetlar",
+        kafedralar: "Kafedralar",
+        markazVaBolimlar: "Markaz va bo'limlar",
+        kafedra: "Kafedra",
+        filial: "Filial",
         faoliyat: "Faoliyat",
         ilmiyFaoliyat: "Ilmiy faoliyat",
         ilmiyUslubiy: "Ilmiy-uslubiy jurnal",
@@ -34,6 +64,7 @@ const resources = {
         ijodiyNatijalar: "Kasbiy ijodiy imtihon natijalari",
         festivallar: "Festivallar",
         onlaynKuzatish: "Ijodiy imtihonlar (Onlayn)",
+        virtualTour: "3D Virtual Sayohat",
         hemis: "HEMIS Tizimi"
       },
       // Hero
@@ -51,7 +82,14 @@ const resources = {
         desc: "Akademik musiqa, tadbirlar va oliygoh hayotidagi eng so'nggi voqealar bilan tanishing.",
         allNews: "Barcha yangiliklar",
         noNews: "Yangiliklar hozircha mavjud emas.",
-        readTime: "min o'qiladi"
+        eventsTitle: "Konsert va",
+        eventsSubtitle: "Afishalar",
+        eventsDesc: "Yaqin kunlarda bo'lib o'tadigan konsertlar, mahorat darslari va madaniy tadbirlar jadvali.",
+        allEvents: "Barcha afishalar",
+        noEvents: "Afishalar hozircha mavjud emas.",
+        readTime: "min o'qiladi",
+        more: "Batafsil",
+        virtualTour: "Sayohatni boshlash"
       },
       // Footer
       footer: {
@@ -59,17 +97,50 @@ const resources = {
         desc: "O'zbekiston Davlat Konservatoriyasi veb-sayti. Barcha huquqlar himoyalangan.",
         contact: "Bog'lanish",
         addressTitle: "Manzil",
-        address: "Toshkent shahri"
+        address: "Toshkent shahri, Olmazor ko’chasi, 1-uy",
+        siteMap: "Sayt xaritasi",
+        usefulLinks: "Foydali havolalar",
+        socials: "Biz ijtimoiy tarmoqlarda"
       }
     }
   },
   ru: {
     translation: {
       saytTest: "САЙТ РАБОТАЕТ В ТЕСТОВОМ РЕЖИМЕ",
+      // Rektorat
+      rektorat: {
+        title: "Ректорат",
+        subtitle: "Руководство Государственной консерватории Узбекистана",
+        desc: "Часы приема, контактные телефоны и адреса",
+        prorectors: "Проректоры",
+        reception: "Часы приема",
+        phone: "Телефон",
+        email: "E-mail",
+        degreeLabel: "Ученая степень",
+        unavailable: "Недоступно",
+        days: {
+          monFri: "Понедельник-Пятница",
+          wed: "Среда 14:00-17:00",
+          monFriRange: "Понедельник-Пятница, 9:00-12:00"
+        },
+        positions: {
+          rektor: "Ректор",
+          firstProrektor: "Первый проректор по вопросам молодежи и духовно-просветительской работе",
+          eduProrektor: "Проректор по учебной работе",
+          sciProrektor: "Проректор по научной и творческой работе"
+        }
+      },
       nav: {
         konservatoriya: "Консерватория",
+        odobAhloq: "Правила этикета",
         davlatRamzlari: "Государственные символы",
         tuzilma: "Структура",
+        rektorat: "Ректорат",
+        fakultetlar: "Факультеты",
+        kafedralar: "Кафедры",
+        markazVaBolimlar: "Центры и отделы",
+        kafedra: "Кафедра",
+        filial: "Филиал",
         faoliyat: "Деятельность",
         ilmiyFaoliyat: "Научная деятельность",
         ilmiyUslubiy: "Научно-методический журнал",
@@ -94,6 +165,7 @@ const resources = {
         ijodiyNatijalar: "Результаты творческих экзаменов",
         festivallar: "Фестивали",
         onlaynKuzatish: "Творческие экзамены (Онлайн)",
+        virtualTour: "3D Виртуальное путешествие",
         hemis: "Система HEMIS"
       },
       hero: {
@@ -109,24 +181,64 @@ const resources = {
         desc: "Узнайте о последних событиях академической музыки, мероприятиях и жизни университета.",
         allNews: "Все новости",
         noNews: "Новостей пока нет.",
-        readTime: "мин чтения"
+        eventsTitle: "Концерты и",
+        eventsSubtitle: "Афиши",
+        eventsDesc: "Расписание предстоящих концертов, мастер-классов и культурных мероприятий.",
+        allEvents: "Все афиши",
+        noEvents: "Афиш пока нет.",
+        readTime: "мин чтения",
+        more: "Подробнее",
+        virtualTour: "Начать путешествие"
       },
       footer: {
         title: "Консерватория",
         desc: "Веб-сайт Государственной консерватории Узбекистана. Все права защищены.",
         contact: "Контакты",
         addressTitle: "Адрес",
-        address: "город Ташкент"
+        address: "город Ташкент, улица Олмазор, 1",
+        siteMap: "Карта сайта",
+        usefulLinks: "Полезные ссылки",
+        socials: "Мы в соцсетях"
       }
     }
   },
   en: {
     translation: {
       saytTest: "SITE IS WORKING IN TEST MODE",
+      // Rektorat
+      rektorat: {
+        title: "Rectorate",
+        subtitle: "Leadership of the State Conservatory of Uzbekistan",
+        desc: "Admission hours, contact numbers and addresses",
+        prorectors: "Vice-Rectors",
+        reception: "Reception Hours",
+        phone: "Phone",
+        email: "E-mail",
+        degreeLabel: "Academic Degree",
+        unavailable: "Unavailable",
+        days: {
+          monFri: "Monday-Friday",
+          wed: "Wednesday 14:00-17:00",
+          monFriRange: "Monday-Friday, 9:00-12:00"
+        },
+        positions: {
+          rektor: "Rector",
+          firstProrektor: "First Vice-Rector for Youth Issues and Spiritual and Educational Work",
+          eduProrektor: "Vice-Rector for Academic Affairs",
+          sciProrektor: "Vice-Rector for Scientific and Creative Work"
+        }
+      },
       nav: {
         konservatoriya: "Conservatory",
+        odobAhloq: "Code of Conduct",
         davlatRamzlari: "State Symbols",
-        tuzilma: "Structure (Rectorate, Faculties)",
+        tuzilma: "Structure",
+        rektorat: "Rectorate",
+        fakultetlar: "Faculties",
+        kafedralar: "Departments",
+        markazVaBolimlar: "Centers and Divisions",
+        kafedra: "Department",
+        filial: "Branch",
         faoliyat: "Activity",
         ilmiyFaoliyat: "Scientific Activity",
         ilmiyUslubiy: "Scientific-methodological Journal",
@@ -151,6 +263,7 @@ const resources = {
         ijodiyNatijalar: "Creative Exam Results",
         festivallar: "Festivals",
         onlaynKuzatish: "Online Observation of Creative Exams",
+        virtualTour: "3D Virtual Tour",
         hemis: "HEMIS System"
       },
       hero: {
@@ -166,14 +279,24 @@ const resources = {
         desc: "Learn about the latest events in academic music, activities, and university life.",
         allNews: "All News",
         noNews: "No news available yet.",
-        readTime: "min read"
+        eventsTitle: "Concerts and",
+        eventsSubtitle: "Events",
+        eventsDesc: "Schedule of upcoming concerts, master classes and cultural events.",
+        allEvents: "All events",
+        noEvents: "No events available yet.",
+        readTime: "min read",
+        more: "Details",
+        virtualTour: "Start Tour"
       },
       footer: {
         title: "Conservatory",
         desc: "Website of the State Conservatory of Uzbekistan. All rights reserved.",
         contact: "Contact",
         addressTitle: "Address",
-        address: "Tashkent city"
+        address: "1 Olmazor Street, Tashkent City",
+        siteMap: "Site Map",
+        usefulLinks: "Useful Links",
+        socials: "Social Media"
       }
     }
   }

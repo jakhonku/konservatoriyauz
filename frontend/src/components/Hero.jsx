@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const { t } = useTranslation();
@@ -40,15 +41,15 @@ const Hero = () => {
                             </h1>
                             
                             <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-8 pt-4">
-                                <a href="#" className="group relative px-8 py-3 bg-blue-900 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-blue-950 shadow-xl shadow-black/60 text-center">
+                                <Link to="/qabul-dasturlari" className="group relative px-8 py-3 bg-blue-900 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-blue-950 shadow-xl shadow-black/60 text-center">
                                     <span className="relative z-10 flex items-center justify-center">
                                         {t('hero.qabul')}
                                         <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                                     </span>
-                                </a>
-                                <a href="#" className="px-8 py-3 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm flex items-center justify-center">
+                                </Link>
+                                <Link to="/konservatoriya" className="px-8 py-3 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all backdrop-blur-sm flex items-center justify-center text-center">
                                     {t('hero.bizHaqimizda')}
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -57,5 +58,6 @@ const Hero = () => {
         </section>
     );
 };
+
 
 export default Hero;

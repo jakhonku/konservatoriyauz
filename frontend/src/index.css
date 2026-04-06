@@ -24,11 +24,40 @@ body {
   width: 100%;
 }
 
-.hero-section {
-    background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)), url('/bg.jpg') center/cover no-repeat;
+/* Animations */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Custom styles from original */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.slide-down { animation: slideDown 0.3s ease-out forwards; }
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-ken-burns { animation: kenBurns 20s ease-in-out infinite; }
+.animate-marquee { display: inline-block; white-space: nowrap; animation: marquee 30s linear infinite; }
+
+/* Components */
 .nav-link {
     position: relative;
     transition: color 0.3s ease;
@@ -40,14 +69,13 @@ body {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #2b6cb0;
+    background-color: #1d4ed8;
     transition: width 0.3s ease;
 }
 .nav-link:hover::after {
     width: 100%;
 }
 
-/* Dropdown styles */
 .dropdown:hover .dropdown-menu {
     display: block !important;
     opacity: 1 !important;
@@ -58,15 +86,4 @@ body {
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-@keyframes marquee {
-  0%   { transform: translateX(100vw); }
-  100% { transform: translateX(-100%); }
-}
-
-.animate-marquee {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 45s linear infinite;
 }
